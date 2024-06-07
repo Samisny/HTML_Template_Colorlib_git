@@ -1,7 +1,20 @@
 
-/*  comments */
+/*  1- Commom styles
+    2- General styles
+    3- Sections:
+        3.0 Header section
+        3.1 Home section
+        3.2 About section
+        3.3 Portfolio section
+        3.4 Service section
+        3.5 Prices section
+        3.6 Team section
+        3.7 Blog page
+        3.8 Contact section
+        3.9  Footer section
+ */
 
-/*
+/*  Commomm Styles
  - Collect the replicated features:
     - container (div 80% - center) 
     - opacity hover
@@ -10,6 +23,64 @@
     - hover effect 1 (left to right)
     - hover effect 2 (up to down)
     
-
-
 */
+
+/* General styles , css style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* ccs3 */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* css font varela round - google fonts */
+body {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /* header */
+  /*  3.0 Header section */
+  .header {
+    background: gray;
+  }
+
+  .header-content {
+    overflow: hidden;  /* it's doing the same doing of .clear which solving float problem */
+  }
+  
+  .header .logo {
+    width: 40%;
+    float: left;
+  }
+
+  .header .logo img {
+    width: 25%;
+  }
+
+  .header .nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+  }
+
+  .header .nav li {
+    display: inline-block;
+    padding: 20px;
+  }
+
+  .header .nav li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 15px;
+  }
