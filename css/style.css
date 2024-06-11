@@ -1,18 +1,4 @@
 
-/*  1- Commom styles
-    2- General styles
-    3- Sections:
-        3.0 Header section
-        3.1 Home section
-        3.2 About section
-        3.3 Portfolio section
-        3.4 Service section
-        3.5 Prices section
-        3.6 Team section
-        3.7 Blog page
-        3.8 Contact section
-        3.9  Footer section
- */
 
 /*  Commomm Styles
  - Collect the replicated features:
@@ -32,6 +18,11 @@
     box-sizing: border-box;  /* ccs3 */
 }
 
+
+.pd-y {
+    padding: 120px 0;
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -44,14 +35,71 @@ body {
     font-style: normal;
   }
 
-  .clear {
+.clear {
     clear: both;
   }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: montserrat, sans-serif;
+} 
+
+button {
+    font-family: "Varela Round", sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.section-header .line {
+    display: block;
+    height: 5px;
+    width: 60px;
+    margin: auto;
+    background-color: #6195ff;
+}
+
+.ltr-effect {
+    position: relative;
+}
+
+.ltr-effect:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.ltr-effect:hover:after {
+    width: 100%;
+}
+
+
+/* General ==================== ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
   /* header */
   /*  3.0 Header section */
   .header {
-    background: gray;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
   }
 
   .header-content {
@@ -67,20 +115,318 @@ body {
     width: 25%;
   }
 
+  .header .logo img {
+    width: 25%;
+    margin-top: 15px;
+  }
+
   .header .nav {
     width: 60%;
     float: left;
     list-style: none;
+    text-align: right;
   }
 
-  .header .nav li {
+  .header .nav > li {
     display: inline-block;
-    padding: 20px;
+    /* padding: 20px; */
+    /* width: 75px; */
+    text-align: right;
   }
 
-  .header .nav li a {
+  .header .nav > li > a {
     color: white;
     text-decoration: none;
     display: block;
     padding: 20px 15px;
   }
+
+.header .nav > li > a.active:after,
+.header .nav > li > a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: #6195ff;
+    transition: width 0.5s;
+}
+
+.header .nav > li > a.active:after {
+    width: 100%;
+}
+
+.header .nav > li > a:after {
+    width: 0;
+}
+
+.header .nav > li > a:hover::after{
+    width: 100%;
+}
+
+.dropdown {
+
+}
+
+.dropdown-menu {
+position: absolute;
+background: #6195ff;
+width: 150px;
+text-align: center;
+left: -50$;
+top: 70%;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.5s , visibility 0.5s
+}
+
+.dropdown-menu a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================  Header =======^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /* 1- Commom styles
+    2- General styles
+    3- Sections: */
+        /* 3.0 Header section */
+        /* 3.1 Home section */
+.home {
+    height: 100vh;
+    background-image: url(../images/background1.jpg);
+    background-position: center;
+    background-size: cover;  /*css3*/
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.home-content {
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home .title {
+    color: #fff;
+    font-size: 3.1rem;
+    text-transform: uppercase;
+}
+
+.home .home-desc{
+    margin: 20px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.hover-opacity {
+    transition: opacity 0.5;
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18 px;
+}
+
+.home .btn-start {
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.home .btn-learn {
+    background-color: #6195ff;
+    color: #fff;
+}
+        
+        /* 3.2 About section   */
+.about {
+    
+}
+
+.about-content {
+    overflow: hidden;
+}
+
+.about-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+}
+
+.about-item.mg {
+    margin: 0 5%;
+}
+
+.about-item .icon {
+    color: #6195ff;
+    margin-bottom: 10px;
+}
+
+.about-item-title {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+}
+
+.about-item-desc {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #999;
+
+}
+
+.about-item-link {
+    color: #6195ff;
+    text-transform: capitalize;
+}
+
+.about-item:hover {
+    /* background: red; */
+}
+
+.about-item:hover .about-item-title {
+    color: #fff;
+}
+
+
+        /* 3.3 Portfolio section */
+.portfolio {
+    background: #f9f9f9;
+}
+
+.portfolio-content {
+    overflow: hidden;
+}
+
+.portfolio-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 60px;
+    position: relative;
+    padding: 20px;
+}
+
+.portfolio-item .layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.portfolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+.portfolio-item:hover .layer-content-title,
+.portfolio-item:hover .layer-content a,
+.portfolio-item:hover .layer-content .category {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-item mg {
+    width: 100%;
+}
+
+.portfolio-item.mg {
+    margin: 0 5%;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.layer-content .layer-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.layer-content-title {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: top 0.5;
+    transition-delay: 0.5s, opacity 0.5s;
+}
+
+.layer-content .category {
+    color: #6195ff;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: top 0.5;
+    transition-delay: 0.5s, opacity 0.5s;
+
+}
+
+.layer-content a {
+    color: #fff;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: top 0.5;
+    transition-delay: 0.5s, opacity 0.5s;
+}
+
+.layer-content a i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #6195ff;
+}
+
+        /* 3.4 Service section */
+        /* 3.5 Prices section */
+        /* 3.6 Team section */
+        /* 3.7 Blog page */
+        /* 3.8 Contact section */
+        /* 3.9  Footer section */
+

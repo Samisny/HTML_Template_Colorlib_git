@@ -27,10 +27,10 @@
             <div class="container">
                 <div class="header-content">  <!-- this div to solve the float problem specifically for (this div) the header content-->
                     <div class="logo">
-                        <img src="images/logo.png" alt="logo image" draggable="false">  
+                        <img src="images/logo-alt.png" alt="logo image" draggable="false">  
                     </div>
                     <ul class="nav">
-                        <li> <a href="#">Home</a></li>
+                        <li> <a href="#" class="active">Home</a></li>
                         <li> <a href="#">About</a></li>
                         <li> <a href="#">Portfolio</a></li>
                         <li> <a href="#">Services</a></li>
@@ -38,15 +38,161 @@
                         <li> <a href="#">Team</a></li>
                         
                         <!-- it has drop down list, so we need fontAwesome to get the icons that we need and fonts -->
-                        <li> <a href="#">Blog</a></li>
+                        <li class="dropdown"> 
+                            <a href="#">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="#">Blog Post</a></li>
+                            </ul>
+
+                        </li>
                         <li> <a href="#">Contact</a></li>
                     </ul>
                 </div> <!--./header content-->
                 <!-- <div class="clear"></div> -->
             </div> <!--./container-->
         </div> <!--./header-->
-    </body>
 
+        <!-- Home section -->
+        <div class="home">
+            <div class="overlay">
+            <div class="home-content">
+                <h1 class="title"> we are creative acency </h1>
+                <p class="home-desc">
+                    We are excited to be part of the WordPress community and looking to make contribution by releasing
+                    free WordPress themes for everyone to use. Other themes can be found here.
+                </p>
+
+                <button class="btn btn-start hover-opacity">Get Started !</button>
+                <button class="btn btn-learn hover-opacity">Learn More !</button>
+            </div> <!--./home-content-->
+            </div> <!--./overlay-->
+        </div> <!--./home-->
+
+        <!-- Section header - the header of every section or div -->
+        <!-- <div class="section-header">
+            <h2 class="section-title">Welcome to website</h2>
+            <span class="line"></span>
+        </div> -->
+
+        <!-- About section -->
+        <div class="about pd-y">
+            <div class="section-header">
+                <h2 class="section-title">Welcome to website</h2>
+                <span class="line"></span>
+            </div> <!--./section header-->
+
+           <div class="container">
+            <div class="about-content">
+                <div class="about-item ltr-effect">
+                    <i class="icon fa fa-cogs fa-2x"></i>
+                    <h2 class="about-item-title">fully customizible</h2>
+                    <p class="about-item-desc">
+                        Maecenas tempus tellus eget condimentum rhoncus sem quam semer libero sit amet.
+                    </p>        
+                    <a href="#" class="about-item-link">read more</a>
+                </div> <!--./about-item 1 -->
+                <div class="about-item mg ltr-effect">
+                    <i class="icon fa fa-magic fa-2x"></i>
+                    <h2 class="about-item-title">fully customizible</h2>
+                    <p class="about-item-desc">
+                        Maecenas tempus tellus eget condimentum rhoncus sem quam semer libero sit amet.
+                    </p>        
+                    <a href="#" class="about-item-link">read more</a>
+                </div> <!--./about-item 2-->
+                <div class="about-item ltr-effect">
+                    <i class="icon fa fa-mobile fa-2x"></i>
+                    <h2 class="about-item-title">fully customizible</h2>
+                    <p class="about-item-desc">
+                        Maecenas tempus tellus eget condimentum rhoncus sem quam semer libero sit amet.
+                    </p>        
+                    <a href="#" class="about-item-link">read more</a>
+                </div> <!--./about-item 3-->
+            </div> <!--./about-content-->
+           </div> <!--./container-->
+        </div>  <!--./about-->
+
+        <!--Portfolio Section-->
+        <div class="portfolio pd-y">
+            <div class="section-header">
+                <h2 class="section-title">featured works</h2>
+                <span class="line"></span>
+            </div>
+
+            <div class="container">
+                <div class="portfolio-content">
+                    <div class="portfolio-item">
+                        <img src="images/work1.jpg" alt=""> <!--pic 1-->
+                        <div class="layer-content">
+                            <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                                <a href="#"><i class="fa fa-edit fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+                            </div>
+                        </div> <!--./layer-content-->
+                    </div> 
+                    <div class="portfolio-item mg">
+                        <img src="images/work2.jpg" alt=""> <!--pic 2-->
+                        <div class="layer-content">
+                            <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                                <a href="#"><i class="fa fa-edit fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+                            </div>
+                        </div> <!--./layer-content-->
+                    </div> 
+                    <div class="portfolio-item">
+                        <img src="images/work3.jpg" alt=""> <!--pic 3-->
+                        <div class="layer-content">
+                            <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                                <a href="#"><i class="fa fa-edit fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+                            </div>
+                        </div> <!--./layer-content-->
+                    </div> 
+                    <div class="portfolio-item">
+                        <img src="images/work4.jpg" alt=""> <!--pic 4-->
+                        <div class="layer-content">
+                            <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                                <a href="#"><i class="fa fa-edit fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+                            </div>
+                        </div> <!--./layer-content-->
+                    </div> 
+                    <div class="portfolio-item mg">
+                        <img src="images/work5.jpg" alt=""> <!--pic 5-->
+                        <div class="layer-content">
+                            <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                                <a href="#"><i class="fa fa-edit fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+                            </div>
+                        </div> <!--./layer-content-->
+                    </div> 
+                    <div class="portfolio-item">
+                        <img src="images/work6.jpg" alt=""> <!--pic 6-->
+                        <div class="layer-content">
+                            <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                                <a href="#"><i class="fa fa-edit fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+                            </div>
+                        </div> <!--./layer-content-->
+                    </div> 
+                </div> <!--./portfolio-content-->
+               </div> <!--./container-->
+        </div>  <!--./portfolio-item 3-->
+
+        <!-- offer section -->
+        <div class="offer"
+    </body>
 
 
 </html>
